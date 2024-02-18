@@ -19,19 +19,22 @@
         currentPath.value = window.location.hash
     })
 
-    const currentView = computed(() => {
-        return routes[currentPath.value.slice(1) || '/'] || NotFound
+   
+
+    window.addEventListener("scroll", function(){
+        var header = this.document.querySelector("nav");
+        header.classList.toggle("stickyy", window.scrollY > 0)
     })
 </script>
 
 
 <template>
-    <nav class="p-2 bg-[#11111F]">
+    <nav class="p-2 fixed bg-[#11111F] w-screen top-0 left-0 duration-500 z-10">
         <div class="flex justify-between mx-5 bg-mainc items-center ">
-            <img src="../../logo2.PNG" alt="" class="w-32">
+            <p class="text-white font-bold relative duration-500 tracking-wider">RECIPE REALEM </p>
             <!-- Use PascalCase for component name -->
             <SearchBar />
-            <ul class="flex gap-7  h-fit text-white p-2 px-14 rounded-lg items-center">
+            <ul class="flex gap-7  h-fit text-white p-2 px-14 rounded-lg items-center tracking-wide">
                 <li><a href="#/">Home</a></li>
                 <li><a href="#/browse">Browse Recipe</a></li>
                 <li><a href="#/create">Create Recipe</a></li>
@@ -53,3 +56,20 @@ export default {
     }
 }
 </script>
+
+<style>
+
+nav.stickyy {
+    padding:4px 10px;
+    background-color: #fff;
+}
+nav.stickyy p {
+    letter-spacing: 0.1em;
+}
+nav.stickyy p,
+nav.stickyy a{
+    color:#000;
+    
+}
+
+</style>
