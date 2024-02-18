@@ -31,7 +31,7 @@
 <template>
     <nav class="p-2 fixed bg-[#11111F] w-screen top-0 left-0 duration-500 z-10">
         <div class="flex justify-between mx-5 bg-mainc items-center ">
-            <p class="text-white font-bold relative duration-500 tracking-wider">RECIPE REALEM </p>
+            <p class="text-white font-bold relative duration-500 tracking-wider">RECIPE REALM </p>
             <!-- Use PascalCase for component name -->
             <SearchBar />
             <ul class="flex gap-7  h-fit text-white p-2 px-14 rounded-lg items-center tracking-wide">

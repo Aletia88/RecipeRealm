@@ -5,6 +5,7 @@ import Home from "./components/pages/Home.vue";
 import BrowseRecipe from "./components/pages/BrowseRecipe.vue";
 import CreateRecipe from "./components/pages/CreateRecipe.vue";
 import About from "./components/pages/About.vue";
+import FooterR from "./components/FooterR.vue";
 
 const routes = {
   "/": Home,
@@ -31,4 +32,7 @@ const currentView = computed(() => {
   <main>
     <component :is="currentView" />
   </main>
+  <footer>
+    <FooterR />
+  </footer>
 </template>
