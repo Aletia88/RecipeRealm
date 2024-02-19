@@ -4,12 +4,14 @@
     import BrowseRecipe from './pages/BrowseRecipe.vue';
     import CreateRecipe from './pages/CreateRecipe.vue';
     import About from './pages/About.vue';
+    import LoginPage from './views/LoginPage.vue'
 
     const routes = {
         '/':Home,
         '/browse': BrowseRecipe,
         '/create': CreateRecipe,
         '/about': About,
+        '/login': LoginPage,
 
     }
 
@@ -39,7 +41,8 @@
                 <li><a href="#/browse">Browse Recipe</a></li>
                 <li><a href="#/create">Create Recipe</a></li>
                 <li><a href="#/about">About</a></li>
-                <li class="bg-[#F4CE14] px-3 py-1 text-black rounded "><a href="">Sign In</a></li>
+                <!-- <li class="bg-[#F4CE14] px-3 py-1 text-black rounded "><a href="#/login">Sign In</a></li> -->
+                <router-link to="/login">Sign In</router-link>
                
             </ul>
         </div>
