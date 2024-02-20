@@ -3,13 +3,12 @@
       <div className='hidden lg:block lg:w-1/2 h-screen'>
         <img src="../../public/engin-akyurt-VCUSHIWzs0M-unsplash.jpg" alt=""  className='h-screen'/>
       </div>
-      <div className="lg:w-1/2 h-screen bg-white flex flex-col items-center rounded px-8 py-6 shadow-gray justify-center w-full ">
-        <h2 className="text-2xl font-bold mb-6">Login Page</h2>
-  <p className="text-red-500 mb-4">{error}</p>
-        <form  className='w-4/5 self-center'>
+      <div className="lg:w-1/2 h-screen flex flex-col items-center rounded px-8 py-6 shadow-gray justify-center w-full ">
+          <form  className=' bg-[#aaa] rounded-md shadow-black/10 shadow-md bg-opacity-20 p-14 w-4/5 self-center'>
+            <h2 className="text-2xl font-bold mb-6">Login Page</h2>
           <div className="mb-4">
             <label htmlFor="username" className="block text-gray-700 font-medium mb-2">
-              Username:
+              Email:
             </label>
             <input
               type="text"
@@ -33,18 +32,18 @@
           >
             Login
           </button>
+          <p className="mt-4">
+            Don't have an account?{' '}
+            <Link
+              to="/register"
+              onClick={handleRegisterClick}
+              className="text-blue-500 hover:text-blue-700"
+            >
+              Register
+            </Link>
+          </p>
         </form>
 
-        <p className="mt-4">
-          Don't have an account?{' '}
-          <Link
-            to="/register"
-            onClick={handleRegisterClick}
-            className="text-blue-500 hover:text-blue-700"
-          >
-            Register
-          </Link>
-        </p>
       </div>
     </div>
 
