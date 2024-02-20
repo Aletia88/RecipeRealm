@@ -12,6 +12,7 @@
         '/create': CreateRecipe,
         '/about': About,
         '/login': LoginPage,
+        '/register': RegisterationPage
 
     }
 
@@ -31,9 +32,9 @@
 
 
 <template>
-    <nav class="p-2 fixed bg-[#11111F] w-screen top-0 left-0 duration-500 z-10">
+    <nav class="p-2 fixed bg-[#11111F] w-screen top-0 left-0 duration-500 z-50">
         <div class="flex justify-between mx-5 bg-mainc items-center ">
-            <p class="text-white font-bold relative duration-500 tracking-wider">RECIPE REALM </p>
+            <a href="#/" class="text-white font-bold relative duration-500 tracking-wider">RECIPE REALM </a>
             <!-- Use PascalCase for component name -->
             <SearchBar />
             <ul class="flex gap-7  h-fit text-white p-2 px-14 rounded-lg items-center tracking-wide">
@@ -41,8 +42,8 @@
                 <li><a href="#/browse">Browse Recipe</a></li>
                 <li><a href="#/create">Create Recipe</a></li>
                 <li><a href="#/about">About</a></li>
-                <!-- <li class="bg-[#F4CE14] px-3 py-1 text-black rounded "><a href="#/login">Sign In</a></li> -->
-                <router-link to="/login">Sign In</router-link>
+                <li class="bg-[#F4CE14] px-3 py-1 text-black rounded "><a href="#/login">Sign In</a></li>
+                <!-- <router-link to="/login">Sign In</router-link> -->
                
             </ul>
         </div>
@@ -52,6 +53,7 @@
 <script>
 // Import the SearchBar component
 import SearchBar from './SearchBar.vue';
+import RegisterationPage from './views/RegisterationPage.vue';
 
 export default {
     components: {
