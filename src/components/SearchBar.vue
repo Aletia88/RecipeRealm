@@ -10,7 +10,7 @@ function filteredList() {
 </script>
 
 <template>
-   <input type="text" v-model="input" placeholder="Search" class="p-2 h-fit border rounded-md border-solid border-[#F4CE14] w-2/6  " />
+   <input type="text" v-model="input" placeholder="Search" class="p-2 h-fit border rounded-md border-solid border-[#F4CE14] w-1/4  " />
   <div class="item fruit" v-for="fruit in filteredList()" :key="fruit">
     <p>{{ fruit }}</p>
   </div>
